@@ -8,6 +8,11 @@ Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');
 
+Route::get('game-list', function () {
+    return Inertia::render('game-list', ['apiKey' => env('GAME_API_KEY')]);
+})->name('game-list')
+;
+
 Route::middleware([
     'auth',
     ValidateSessionWithWorkOS::class,

@@ -41,3 +41,24 @@ export interface User {
     updated_at: string;
     [key: string]: unknown; // This allows for additional properties...
 }
+
+export interface Games {
+    id: number;
+    name: string;
+    slug: string;
+    added: number;
+}
+export interface Plaform {
+    id: number;
+    name: string;
+    slug: string;
+    img_background: string;
+    image: string | null;
+    games: Games[];
+}
+export interface Response {
+    count: number;
+    next: string | null;
+    previous: string | null;
+    results: Platform[];
+}
