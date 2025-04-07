@@ -46,15 +46,16 @@ export interface Games {
     id: number;
     name: string;
     slug: string;
-    added: number;
+    background_image: string;
+    raiting: number;
+    platforms:
 }
 export interface Plaform {
     id: number;
     name: string;
     slug: string;
-    img_background: string;
     image: string | null;
-    games: Games[];
+    image_background: string;
 }
 export interface Response {
     count: number;
