@@ -55,10 +55,13 @@ const CardWrapper = styled.div<{ $bg: string }>`
     .flip-card-back {
         background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%, bisque 40%, rgb(255, 185, 160) 78%);
         transform: rotateY(180deg);
+        overflow-y: auto; /* Abilita lo scroll verticale */
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 `;
 
-export default function StyledWrapper({ id, gameName, background_image, released, rating, platforms }) {
+export default function StyledWrapper({ gameName, background_image, released, rating, platforms }) {
     return (
         <CardWrapper $bg={background_image}>
             <div className="flip-card">
