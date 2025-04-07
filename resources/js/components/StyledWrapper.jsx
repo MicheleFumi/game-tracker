@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function StyledWrapper({ id, gameName }) {
+export default function StyledWrapper({ id, gameName, background_image }) {
     const StyledWrapper = styled.div`
         .flip-card {
             background-color: transparent;
@@ -43,11 +43,13 @@ export default function StyledWrapper({ id, gameName }) {
             backface-visibility: hidden;
             border: 1px solid coral;
             border-radius: 1rem;
+            color: coral;
         }
 
         .flip-card-front {
-            background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%, rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
-            color: coral;
+            background-image: ${(props) => `url(${background_image})`};
+            background-size: cover;
+            background-position: center;
         }
 
         .flip-card-back {
