@@ -48,7 +48,7 @@ export interface Games {
     slug: string;
     background_image: string;
     raiting: number;
-    platforms:
+    platforms: string;
 }
 export interface Plaform {
     id: number;

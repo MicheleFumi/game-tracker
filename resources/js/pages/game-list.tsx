@@ -33,7 +33,14 @@ export default function GameList({ apiKey }) {
                 ) : (
                     <div className="mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                         {gamesList.map((game) => (
-                            <StyledWrapper key={game.key} gameName={game.name} background_image={game.background_image} />
+                            <StyledWrapper
+                                key={game.id}
+                                gameName={game.name}
+                                background_image={game.background_image}
+                                released={game.released}
+                                rating={game.rating}
+                                platforms={game.platforms}
+                            />
                         ))}
                     </div>
                 )}
